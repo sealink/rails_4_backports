@@ -5,4 +5,11 @@ module Rails4Backports
   if ::ActiveRecord::VERSION::MAJOR == 3
     ActiveRecord::Base.send(:extend, ActiveRecordDynamicFinders)
   end
+
+  class Railtie < ::Rails::Railtie
+    config.after_initialize do |app|
+      require 'rails-secrets'
+      app.config.secret_token ||= app.secrets.secret_key_base
+    end
+  end
 end
