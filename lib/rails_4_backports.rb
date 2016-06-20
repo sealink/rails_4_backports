@@ -7,7 +7,7 @@ module Rails4Backports
   end
 
   class Railtie < ::Rails::Railtie
-    config.after_initialize do |app|
+    config.before_initialize do |app|
       require 'rails-secrets'
       app.config.secret_token ||= app.secrets.secret_key_base
     end
