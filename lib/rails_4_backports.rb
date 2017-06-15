@@ -8,6 +8,8 @@ module Rails4Backports
     end
   end
 
+  require 'rails_4_backports/file_fixtures'
+
   if defined?(Rails)
     class Railtie < ::Rails::Railtie
       config.before_initialize do |app|
