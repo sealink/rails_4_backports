@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This changelog adheres to [Keep a CHANGELOG](http://keepachangelog.com/).  
 
 ## Unreleased
+
+## 0.2.0
 ### Added
 - [TT-1392] Changelog file
 - [TT-2759] Backport rails file_fixture method
